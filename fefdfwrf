@@ -1,0 +1,78 @@
+Aim
+The aim is to provide a concise guide for utilizing Git version control system, covering fundamentalcommands and workflows including tracking changes, committing snapshots, creating branches, andmerging changes.
+Description
+The provided description offers a comprehensive overview of Git, a version control system, detailing itsimportance in tracking modifications to files and categorizing version control systems into local, centralized,and distributed types. It further outlines key steps in version control, including adding files to tracking,committing changes, and pushing them to remote repositories. Essential Git commands such as `gitadd` and`git commit` are explained, along with their roles in staging and snapshotting changes.
+Additionally, it covers branch management, including creating and merging branches, and concludes withinstructions for pushing changes to GitHub.
+What is a “version control system”?
+Version control systems are a category of software tools that helps in recordingchanges madeto files by keeping a track of modifications done in the code.
+Types of Version Control Systems:  Local Version Control Systems  Centralized Version Control Systems  Distributed Version Control Systems
+Three important steps of version control:
+git add changed files to version control tracking.
+git commit the changed files to create a unique snapshot of the local repository.
+git push those changed files from the local copy of a repository to the cloud
+Check the Status of Changes Using GIT Status
+Once you start working, you can use thebeing
+identified by git. git status command to check what changes areTo practice working with this command, use the terminal to navigate to your git practicerepository:
+$ cd practice-git-skillz
+Next, run git status.
+13
+Notice that when you run git status it returns: working tree clean. T
+there areno changes to any files in your r
+Next, open and make a small change to the README.md file in a text editor. Then, run thecommand git status to check that changes have been made to your file(s).
+git status
+On branch main
+Your branch is up-to-date with
+'origin/main'.Changes not staged for
+commit:
+epo - YET.
+his means that
+$ git status
+On branch main
+Your branch is up to date with
+'origin/main'.nothing to commit,
+working tree clean
+modified: README.md
+no changes added to commit (use "git add" and/or "git commit -a")
+The output from the git status command above indicates that you have modified a file(e.g. README.md) that can be added to version control.
+Important Git Commands
+These two commands make up the bulk of many workflows that use git for versioncontrol:
+git add: takes a modified file in your working directory and places themodifiedversion in a staging area for review.
+git commit: takes everything from the staging area and makes a permanent snapshotof the currentstate of your repository that has a unique identifier.
+Add Changed Files Using git add
+file or groups of files to versio
+After making changes, you can add either an individual
+control tracking. To add a single file, run the command:git add
+file-name.extension
+For example, to add the README.md file, you would use:git add
+README.md
+You can also add all of the files that you have edited at the same time using:git add .
+Commit Changed Files Using git commit
+n
+14
+Once you are ready to make a snapshot of the current state of your repository(i.e. movechanges from staging area), you can run git commit. The git commit command requires acommit message that describes the snapshot (i.e. changes) that you made inthat commit.A commit message should outline what changed and why. These messages:
+1. help collaborators and your future self understand what was changed and why.
+2. allow you and your collaborators to find (and undo if necessary) changes that werepreviously made.
+When you are not committing a lot of changes, you can create a short one line commitmessageusing the -m flag as follows:
+git commit -m "Update title and author name in homework for week 3"
+Creating branches
+To keep track of changes to this file using git, you need to:
+1. Clone the repository.
+2. Move into the cloned repository
+3. Create a new branch using the command (replace feature-branch with your desired branchname).
+git checkout -b feature-branch
+4. Make modifications to files in your project.
+5. Use git add to add the changes to the staging area
+6. Commit the changes with a meaningful message
+Merging branches
+To keep track of changes to this file using git, you need to:
+1. Switch back to the main branch.
+git checkout main
+2. Merge the branch into the main branch
+git merge feature-branch
+3. Resolve conflicts (if necessary)
+i. Open the conflicting files and resolve the conflicts manually.
+ii. After resolving conflicts, add the changes to the staging area and commit:
+git add .
+git commit -m "Merge feature-branch into main"
+4. Push changes to github using the following command.
+git push origin main

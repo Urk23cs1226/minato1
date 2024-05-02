@@ -1,0 +1,52 @@
+exp3
+
+PS C:\Users\ragun\githublab> cd minato
+PS C:\Users\ragun\githublab\minato> git pull
+From https://github.com/Urk23cs1226/minato
+ * [new branch]      ragu       -> origin/ragu
+Already up to date.
+PS C:\Users\ragun\githublab\minato> git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\ragun\githublab\minato> git merge ragu
+merge: ragu - not something we can merge
+
+Did you mean this?
+        origin/ragu
+PS C:\Users\ragun\githublab\minato> git checkout ragu
+Switched to a new branch 'ragu'
+branch 'ragu' set up to track 'origin/ragu'.
+PS C:\Users\ragun\githublab\minato> git add .
+PS C:\Users\ragun\githublab\minato> git commit -m "change"
+[ragu 58a037c] change
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 gg
+ create mode 100644 ra.txt
+PS C:\Users\ragun\githublab\minato> git push origin ragu
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 300 bytes | 300.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Urk23cs1226/minato.git
+   9ea9c33..58a037c  ragu -> ragu
+PS C:\Users\ragun\githublab\minato> git checouy\
+git: 'checouy\' is not a git command. See 'git --help'.
+PS C:\Users\ragun\githublab\minato>
+PS C:\Users\ragun\githublab\minato> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\ragun\githublab\minato> git merge ragu
+Updating 9ea9c33..58a037c
+Fast-forward
+ gg     | 0
+ ra.txt | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 gg
+ create mode 100644 ra.txt
+PS C:\Users\ragun\githublab\minato> git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Urk23cs1226/minato.git
+   9ea9c33..58a037c  main -> main
+PS C:\Users\ragun\githublab\minato> 

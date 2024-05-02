@@ -1,0 +1,61 @@
+PS C:\Users\ragun\githublab> git config --global user.name "urk23cs1226"
+PS C:\Users\ragun\githublab> git config --global user.email "ragunathm@karunya.edu.in"
+PS C:\Users\ragun\githublab> git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=urk23cs1226
+user.email=ragunathm@karunya.edu.in
+init.defaultbranch=main
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/Urk23cs1226/githublab.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+
+PS C:\Users\ragun\githublab> git clone https://github.com/Urk23cs1226/minato.git
+Cloning into 'minato'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), 5.30 KiB | 5.30 MiB/s, done.
+PS C:\Users\ragun\githublab> cd minato
+PS C:\Users\ragun\githublab\minato> git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+PS C:\Users\ragun\githublab\minato> git remote add origin https://github.com/Urk23cs1226/minato.git
+error: remote origin already exists.
+PS C:\Users\ragun\githublab\minato> git push origin main
+Everything up-to-date
+PS C:\Users\ragun\githublab\minato> git pull origin main
+From https://github.com/Urk23cs1226/minato
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+PS C:\Users\ragun\githublab\minato>
